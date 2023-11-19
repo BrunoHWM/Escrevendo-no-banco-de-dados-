@@ -4,8 +4,8 @@ EscrevendoNoBanco
 [click here](https://github.com/BrunoHWM/UC10_Documenta-o/blob/main/Comandos%20do%20GIt.md)
 
 
-ConsultandoNoBanco
-[click here](https://github.com/BrunoHWM/UC10_Documenta-o/blob/main/Comandos%20do%20GIt.md)
+ConsultandoNoBanco:
+[click here](https://github.com/BrunoHWM/Java_com_banco_de_dados/blob/main/ConsultandoNoBancoDeDados.md)
 
 ## Ultilizamos 
 
