@@ -3,14 +3,10 @@
 
 ## Introdução 
 
-__Foram criados dois códigos um para escrever (Nome , Numero  e Email) no banco de dados e outro para consultar o banco de dados. Segue a baixou o link para os códigos, o que foi ultilizado e um breve explicação sobre cada item.__ 
+__foi criado um códigos para escrever (Nome , Numero  e Email) no banco de dados. Segue a baixou o link para os códigos, o que foi ultilizado e um breve explicação sobre cada item.__ 
 
 1. EscrevendoNoBanco:
 [click here](https://github.com/BrunoHWM/Java_com_banco_de_dados/blob/main/EscrevendoNoBancoDeDados.md)
-
-
-2. ConsultandoNoBanco:
-[click here](https://github.com/BrunoHWM/Java_com_banco_de_dados/blob/main/ConsultandoNoBancoDeDados.md)
 
 ## Ultilizamos 
 
