@@ -1,8 +1,12 @@
 # Java com banco de dados 
 
 EscrevendoNoBanco
+[click here](https://github.com/BrunoHWM/UC10_Documenta-o/blob/main/Comandos%20do%20GIt.md)
+
 
 ConsultandoNoBanco
+[click here](https://github.com/BrunoHWM/UC10_Documenta-o/blob/main/Comandos%20do%20GIt.md)
+
 ## Ultilizamos 
 
 - SQLite
