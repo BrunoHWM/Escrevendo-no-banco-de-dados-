@@ -1,5 +1,5 @@
 # Escrevendo no banco de dados 
-
+---
 __As importações no Java são essenciais para acessar recursos de bibliotecas externas escrever código mais limpo e legível, ao mesmo tempo em que aproveitamos as funcionalidades disponíveis em diferentes pacotes e bibliotecas, neste caso ultilizamos as bibliotecas.__
 
 1. java.sql.Connection:
@@ -24,31 +24,28 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 ```
+----
+public static void main(String[] args) {: para executar nossa aplicação precisamos do método main, porém o Java só entende que é o método main na nossa aplicação se seguir essa assinatura: public static void main(String[] args).
 
-A classe EscrevendoNoBanco possui uma variável chamada texto, que pode ser acessada e modificada usando os métodos getNome() (para obter o valor atual de texto) e setTexto(String texto) (para atualizar o valor de texto com um novo valor passado como argumento). 
+Scanner sc = new Scanner(System.in);: aqui está sendo criado um objeto da classe Scanner chamado sc. O Scanner é utilizado para receber entrada do usuário. System.in está associado ao console ou à entrada de dados fornecida pelo teclado.
 
-Variável de Instância:
-String texto = "";: Aqui é declarada uma variável de instância chamada texto do tipo String. Inicialmente, ela está vazia.
-
-Método getNome():
-public String getNome() { return texto; }: Este é um método público que não recebe argumentos. Ele retorna o valor da variável texto atualmente armazenado nela.
-
-Método setTexto(String texto):
-public void setTexto(String texto) { this.texto = texto; }: Este é um método público que aceita um argumento do tipo String chamado texto. Ele é usado para atualizar o valor da variável de instância texto com o valor passado como argumento.
 ```
-public class EscrevendoNoBanco {
-    String texto = "";
-
-    public String getNome() {
-        return texto;
-    }
-
-    public void setTexto(String texto) {
-        this.texto = texto;
-    }
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 ```
+---
 
+__Neste trecho de código, o programa está solicitando ao usuário que insira informações por meio do console e armazenando essas informações em variáveis específicas.__
 
+```
+        System.out.print("Nome: ");
+        String nome = sc.nextLine();
 
+        System.out.print("Telefone: ");
+        String telefone = sc.nextLine();
+
+         System.out.print("Email: ");
+        String email = sc.nextLine();
+```
 
 
