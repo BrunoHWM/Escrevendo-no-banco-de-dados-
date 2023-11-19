@@ -1,10 +1,15 @@
 # Java com banco de dados 
 
-EscrevendoNoBanco
-[click here](https://github.com/BrunoHWM/UC10_Documenta-o/blob/main/Comandos%20do%20GIt.md)
+
+## Introdução 
+
+- Foram criados dois códigos um para escrever (Nome , Numero  e Email) no banco de dados e outro para consultar o banco de dados. Segue a baixou o link para os códigos, o que foi ultilizado e um breve explicação sobre o que foi ultilizado.  
+
+1. EscrevendoNoBanco:
+[click here](https://github.com/BrunoHWM/Java_com_banco_de_dados/blob/main/EscrevendoNoBancoDeDados.md)
 
 
-ConsultandoNoBanco:
+2. ConsultandoNoBanco:
 [click here](https://github.com/BrunoHWM/Java_com_banco_de_dados/blob/main/ConsultandoNoBancoDeDados.md)
 
 ## Ultilizamos 
@@ -51,3 +56,6 @@ Alguns pontos sobre o JDBC:
 2. __Execução de consultas:__ Com o JDBC, é possível enviar consultas SQL para o banco de dados a partir de um programa Java. Isso permite a realização de operações como inserção, seleção, atualização e exclusão de dados no banco de dados.
 
 3. __Tratamento de exceções:__ O JDBC lida com exceções relacionadas a erros de conexão, erros de consulta, erros de execução e outros problemas que podem surgir durante a interação com o banco de dados.
+
+
+
