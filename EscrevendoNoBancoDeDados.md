@@ -75,9 +75,6 @@ __O uso do bloco catch é feito para capturar e lidar com exceções. Isso permi
 Além disso, o bloco finally está sendo usado para garantir que o recurso Scanner seja fechado independentemente de a exceção ter sido lançada ou não.
 Isso assegura que, mesmo que ocorra um erro durante a execução do código, o recurso do Scanner será fechado no final, sem deixar vazamentos de recursos.__
 
-
- .__
-
 ```
         } catch (SQLException sqle) {
             System.err.println(sqle.getMessage());
@@ -86,6 +83,58 @@ Isso assegura que, mesmo que ocorra um erro durante a execução do código, o r
             sc.close();
         }
 ```
+---
+
+## Código completo.
+
+```
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class EscrevendoNoBanco {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nome: ");
+        String nome = sc.nextLine();
+
+        System.out.print("Telefone: ");
+        String telefone = sc.nextLine();
+
+         System.out.print("Email: ");
+        String email = sc.nextLine();
+
+        String urlBanco = "jdbc:sqlite:agenda.db";
+        Connection conn;
+
+        try {
+            conn = DriverManager.getConnection(urlBanco);
+            String sql = "INSERT INTO contatos VALUES (?, ? ,?)";
+            PreparedStatement pstatement = conn.prepareStatement(sql);
+            pstatement.setString(1, nome);
+            pstatement.setString(2, telefone);
+            pstatement.setString(3, email);
+            pstatement.executeUpdate();
+
+          
+            pstatement.close();
+            conn.close();
+        } catch (SQLException sqle) {
+            System.err.println(sqle.getMessage());
+
+        } finally {
+            sc.close();
+        }
+    }
+}
+
+
+```
+
 
 
 
