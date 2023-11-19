@@ -1,6 +1,6 @@
-# escrevendo no banco de dados 
+# Escrevendo no banco de dados 
 
-As importações no Java são essenciais para acessar recursos de bibliotecas externas escrever código mais limpo e legível, ao mesmo tempo em que aproveitamos as funcionalidades disponíveis em diferentes pacotes e bibliotecas, neste caso ultilizamos as bibliotecas.
+__As importações no Java são essenciais para acessar recursos de bibliotecas externas escrever código mais limpo e legível, ao mesmo tempo em que aproveitamos as funcionalidades disponíveis em diferentes pacotes e bibliotecas, neste caso ultilizamos as bibliotecas.__
 
 1. java.sql.Connection:
 A classe Connection faz parte do pacote java.sql. Fundamental ao lidar com bancos de dados em Java. Ela representa uma conexão com um banco de dados específico. As operações de leitura, escrita e atualização são feitas por meio de objetos Connection.
@@ -24,4 +24,31 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 ```
+
+A classe EscrevendoNoBanco possui uma variável chamada texto, que pode ser acessada e modificada usando os métodos getNome() (para obter o valor atual de texto) e setTexto(String texto) (para atualizar o valor de texto com um novo valor passado como argumento). 
+
+Variável de Instância:
+String texto = "";: Aqui é declarada uma variável de instância chamada texto do tipo String. Inicialmente, ela está vazia.
+
+Método getNome():
+public String getNome() { return texto; }: Este é um método público que não recebe argumentos. Ele retorna o valor da variável texto atualmente armazenado nela.
+
+Método setTexto(String texto):
+public void setTexto(String texto) { this.texto = texto; }: Este é um método público que aceita um argumento do tipo String chamado texto. Ele é usado para atualizar o valor da variável de instância texto com o valor passado como argumento.
+```
+public class EscrevendoNoBanco {
+    String texto = "";
+
+    public String getNome() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
+```
+
+
+
+
 
