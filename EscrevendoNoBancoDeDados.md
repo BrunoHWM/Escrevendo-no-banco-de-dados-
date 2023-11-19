@@ -35,7 +35,7 @@ public static void main(String[] args) {
 ```
 ---
 
-__Neste trecho de código, o programa está solicitando ao usuário que insira informações por meio do console e armazenando essas informações em variáveis específicas.__
+__Neste trecho de código, o programa está solicitando ao usuário que insira informações por meio do console armazenando essas informações em variáveis específicas.__
 
 ```
         System.out.print("Nome: ");
@@ -50,7 +50,7 @@ __Neste trecho de código, o programa está solicitando ao usuário que insira i
 ---
 
 
-__Já nsse trecho do código trata da inserção de dados em um banco de dados SQLite.por meio de bloco try-catch, primeiro começamos inserindo a url para a conexão com o banco de dados após isso ultilizamos o try. conn = DriverManager.getConnection(urlBanco); - Esta linha estabelece uma conexão com o banco de dados SQLite usando a URL fornecida (jdbc:sqlite:agenda.db).Após isso damos inicio as entradas de dados no banco com Nome , telefone e email. Por fim, as conexões com o PreparedStatement e com o banco de dados são fechadas para liberar os recursos.__
+__Já nesse trecho do código trata da inserção de dados em um banco de dados SQLite.por meio de bloco try-catch, primeiro começamos inserindo a url para a conexão com o banco de dados após isso ultilizamos o try. conn = DriverManager.getConnection(urlBanco); - Esta linha estabelece uma conexão com o banco de dados SQLite usando a URL fornecida (jdbc:sqlite:agenda.db).Após isso damos inicio as entradas de dados no banco com Nome , telefone e email. Por fim, as conexões com o PreparedStatement e com o banco de dados são fechadas para liberar os recursos.__
 
 
 ```
@@ -69,3 +69,26 @@ __Já nsse trecho do código trata da inserção de dados em um banco de dados S
             pstatement.close();
             conn.close();      
 ```
+---
+
+__O uso do bloco catch é feito para capturar e lidar com exceções. Isso permite que você capture o erro caso algo dê errado durante a conexão com o banco de dados ou durante a execução da instrução SQL. Está sendo utilizado o System.err.println(sqle.getMessage()); dentro do bloco catch. Isso imprimirá a mensagem de erro específica associada à exceção SQLException. É uma abordagem útil para identificar qual foi o problema caso ocorra uma exceção.
+Além disso, o bloco finally está sendo usado para garantir que o recurso Scanner seja fechado independentemente de a exceção ter sido lançada ou não.
+Isso assegura que, mesmo que ocorra um erro durante a execução do código, o recurso do Scanner será fechado no final, sem deixar vazamentos de recursos.__
+
+
+ .__
+
+```
+        } catch (SQLException sqle) {
+            System.err.println(sqle.getMessage());
+
+        } finally {
+            sc.close();
+        }
+```
+
+
+
+
+
+
