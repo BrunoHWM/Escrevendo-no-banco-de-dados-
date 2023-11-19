@@ -1,6 +1,6 @@
 # O que ultilizamos 
 
-- Sqlite
+- SQLite
 - Linguagem de programação Java
 - JDBC
 
