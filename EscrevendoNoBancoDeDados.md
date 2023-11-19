@@ -47,5 +47,25 @@ __Neste trecho de código, o programa está solicitando ao usuário que insira i
          System.out.print("Email: ");
         String email = sc.nextLine();
 ```
+---
 
 
+__Já nsse trecho do código trata da inserção de dados em um banco de dados SQLite.por meio de bloco try-catch, primeiro começamos inserindo a url para a conexão com o banco de dados após isso ultilizamos o try. conn = DriverManager.getConnection(urlBanco); - Esta linha estabelece uma conexão com o banco de dados SQLite usando a URL fornecida (jdbc:sqlite:agenda.db).Após isso damos inicio as entradas de dados no banco com Nome , telefone e email. Por fim, as conexões com o PreparedStatement e com o banco de dados são fechadas para liberar os recursos.__
+
+
+```
+         String urlBanco = "jdbc:sqlite:agenda.db";
+         Connection conn;
+          try {
+            conn = DriverManager.getConnection(urlBanco);
+            String sql = "INSERT INTO contatos VALUES (?, ? ,?)";
+            PreparedStatement pstatement = conn.prepareStatement(sql);
+            pstatement.setString(1, nome);
+            pstatement.setString(2, telefone);
+            pstatement.setString(3, email);
+            pstatement.executeUpdate();
+
+          
+            pstatement.close();
+            conn.close();      
+```
