@@ -9,7 +9,7 @@
 
 o SQLite é um sistema de gerenciamento de banco de dados relacional que é conhecido por sua leveza, facilidade de uso e por ser incorporado diretamente nas aplicações.
 
-Aqui estão alguns pontos sobre o SQLite:
+Alguns pontos sobre o SQLite:
 
 1. __Autocontido:__ Ao contrário de muitos outros sistemas de gerenciamento de banco de dados, o SQLite não funciona como um servidor separado. Em vez disso, é uma biblioteca de código-fonte aberto que oferece funcionalidades completas de um banco de dados relacional, mas sem a necessidade de um processo de servidor em execução.
 
@@ -22,7 +22,7 @@ Aqui estão alguns pontos sobre o SQLite:
 
 Java é uma linguagem multiplataforma, orientada a objetos. É uma linguagem de programação rápida, segura e confiável para codificar desde aplicações móveis e software  até aplicações de big data (um processo de coleta, armazenagem, organização, análise e interpretação de grandes volumes de dados de uma empresa ) e tecnologias do servidor.
 
-Aqui estão alguns pontos sobre o Java:
+Alguns pontos sobre o Java:
 
 1. __Portabilidade:__ Uma das características mais marcantes do Java é sua portabilidade. Os programas escritos em Java podem ser executados em diferentes tipos de dispositivos sem a necessidade de recompilação, desde que haja uma Máquina Virtual Java disponível para o sistema operacional de destino.
 
