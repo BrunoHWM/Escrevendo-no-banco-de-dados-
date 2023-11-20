@@ -35,7 +35,7 @@ public static void main(String[] args) {
 ```
 ---
 
-__Neste trecho do código, o programa está solicitando ao usuário que insira informações por meio do console armazenando essas informações em variáveis específicas.__
+__Neste trecho do código, o programa está solicitando pelo Scanner ao usuário que insira informações por meio do console armazenando essas informações em variáveis específicas.__
 
 ```
         System.out.print("Nome: ");
@@ -50,7 +50,7 @@ __Neste trecho do código, o programa está solicitando ao usuário que insira i
 ---
 
 
-__Já nesse trecho do código trata da inserção de dados em um banco de dados SQLite.por meio de bloco try-catch, primeiro começamos inserindo a url para a conexão com o banco de dados após isso ultilizamos o try. conn = DriverManager.getConnection(urlBanco); - Esta linha estabelece uma conexão com o banco de dados SQLite usando a URL fornecida (jdbc:sqlite:agenda.db).Após isso damos inicio as entradas de dados no banco com Nome , telefone e email. Por fim, as conexões com o PreparedStatement e com o banco de dados são fechadas para liberar os recursos.__
+__Já nesse trecho do código começamos inserindo a url para a conexão com o banco de dados, após isso ultilizamos o bloco try. conn = DriverManager.getConnection(urlBanco); - Esta linha estabelece uma conexão com o banco de dados SQLite usando a URL fornecida (jdbc:sqlite:agenda.db).Após isso ultilizamos o comando String sql = "CREATE TABLE IF NOT EXISTS contatos (nome TEXT, telefone TEXT, email TEXT)"; para criar uma tabela contatos caso ela ja não exista. Após ultilizamos o comando sql = "INSERT INTO contatos VALUES (?, ? ,?)"; para inserir os valores na tabela assim damos inicio as entradas de dados no banco( Nome , telefone e email). Por fim, as conexões com o PreparedStatement e com o banco de dados são fechadas para liberar os recursos.__
 
 
 ```
@@ -58,14 +58,20 @@ __Já nesse trecho do código trata da inserção de dados em um banco de dados 
          Connection conn;
           try {
             conn = DriverManager.getConnection(urlBanco);
-            String sql = "INSERT INTO contatos VALUES (?, ? ,?)";
+            String sql = "CREATE TABLE IF NOT EXISTS contatos (nome TEXT, telefone TEXT, email TEXT)";
             PreparedStatement pstatement = conn.prepareStatement(sql);
+            pstatement.executeUpdate();
+
+            sql = "INSERT INTO contatos VALUES (?, ? ,?)";
+            pstatement = conn.prepareStatement(sql);
             pstatement.setString(1, nome);
             pstatement.setString(2, telefone);
             pstatement.setString(3, email);
-            pstatement.executeUpdate();          
+            pstatement.executeUpdate();
+
             pstatement.close();
-            conn.close();      
+            conn.close();
+
 ```
 ---
 
@@ -82,6 +88,9 @@ Isso assegura que, mesmo que ocorra um erro durante a execução do código, o r
         }
 ```
 ---
+##
+__Para ultilizar o código ultilizamos o comando javac EscrevendoNoBanco.java no terminal para compilar o arquivo. E para rodar o arquivo ultilizamos o comando java -classpath "./;./sqlite-jdbc-3.43.0.0.jar" EscrevendoNoBanco isso executara o código__
+
 
 ## Código completo.
 
@@ -103,7 +112,7 @@ public class EscrevendoNoBanco {
         System.out.print("Telefone: ");
         String telefone = sc.nextLine();
 
-         System.out.print("Email: ");
+        System.out.print("Email: ");
         String email = sc.nextLine();
 
         String urlBanco = "jdbc:sqlite:agenda.db";
@@ -111,12 +120,15 @@ public class EscrevendoNoBanco {
 
         try {
             conn = DriverManager.getConnection(urlBanco);
-            String sql = "INSERT INTO contatos VALUES (?, ? ,?)";
+            String sql = "CREATE TABLE IF NOT EXISTS contatos (nome TEXT, telefone TEXT, email TEXT)";
             PreparedStatement pstatement = conn.prepareStatement(sql);
+            pstatement.executeUpdate();
+            sql = "INSERT INTO contatos VALUES (?, ? ,?)";
+            pstatement = conn.prepareStatement(sql);
             pstatement.setString(1, nome);
             pstatement.setString(2, telefone);
             pstatement.setString(3, email);
-            pstatement.executeUpdate();          
+            pstatement.executeUpdate();
             pstatement.close();
             conn.close();
 
