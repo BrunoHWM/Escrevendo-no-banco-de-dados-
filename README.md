@@ -3,7 +3,7 @@
 
 ## Introdução 
 
-__foi criado um códigos para escrever (Nome , Numero  e Email) no banco de dados. Segue a baixou o link para os códigos, o que foi ultilizado e um breve explicação sobre cada item.__ 
+__foi criado um códigos para escrever (Nome , Numero  e Email) no banco de dados. Segue a baixou o link para o códigos, o que foi ultilizado e um breve explicação sobre cada item que foi ultilizado.__ 
 
 1. EscrevendoNoBanco:
 [click here](https://github.com/BrunoHWM/Java_com_banco_de_dados/blob/main/EscrevendoNoBancoDeDados.md)
