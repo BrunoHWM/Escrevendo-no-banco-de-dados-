@@ -88,8 +88,13 @@ Isso assegura que, mesmo que ocorra um erro durante a execução do código, o r
         }
 ```
 ---
-##
+## Rodando o código
 __Para ultilizar o código ultilizamos o comando javac EscrevendoNoBanco.java no terminal para compilar o arquivo. E para rodar o arquivo ultilizamos o comando java -classpath "./;./sqlite-jdbc-3.43.0.0.jar" EscrevendoNoBanco isso executara o código.__
+
+
+## Execução 
+__Quando o código for executado vai abrir o terminal pedindo para o usuário inserir os dados e após isso vai ser criada a agenda.db e dentro dela será salvo os dados inseridos pelo o usuário(Nome , Telefone , Email) e para conferir
+se deu tudo certo você pode ultilizar o comando SELECT nome , telefone , email FROM contatos; em seu SQLite.__
 
 
 ## Código completo.
