@@ -63,9 +63,7 @@ __Já nesse trecho do código trata da inserção de dados em um banco de dados 
             pstatement.setString(1, nome);
             pstatement.setString(2, telefone);
             pstatement.setString(3, email);
-            pstatement.executeUpdate();
-
-          
+            pstatement.executeUpdate();          
             pstatement.close();
             conn.close();      
 ```
@@ -118,11 +116,10 @@ public class EscrevendoNoBanco {
             pstatement.setString(1, nome);
             pstatement.setString(2, telefone);
             pstatement.setString(3, email);
-            pstatement.executeUpdate();
-
-          
+            pstatement.executeUpdate();          
             pstatement.close();
             conn.close();
+
         } catch (SQLException sqle) {
             System.err.println(sqle.getMessage());
 
