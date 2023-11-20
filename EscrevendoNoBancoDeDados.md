@@ -35,7 +35,7 @@ public static void main(String[] args) {
 ```
 ---
 
-__Neste trecho de código, o programa está solicitando ao usuário que insira informações por meio do console armazenando essas informações em variáveis específicas.__
+__Neste trecho do código, o programa está solicitando ao usuário que insira informações por meio do console armazenando essas informações em variáveis específicas.__
 
 ```
         System.out.print("Nome: ");
