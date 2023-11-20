@@ -89,7 +89,7 @@ Isso assegura que, mesmo que ocorra um erro durante a execução do código, o r
 ```
 ---
 ##
-__Para ultilizar o código ultilizamos o comando javac EscrevendoNoBanco.java no terminal para compilar o arquivo. E para rodar o arquivo ultilizamos o comando java -classpath "./;./sqlite-jdbc-3.43.0.0.jar" EscrevendoNoBanco isso executara o código__
+__Para ultilizar o código ultilizamos o comando javac EscrevendoNoBanco.java no terminal para compilar o arquivo. E para rodar o arquivo ultilizamos o comando java -classpath "./;./sqlite-jdbc-3.43.0.0.jar" EscrevendoNoBanco isso executara o código.__
 
 
 ## Código completo.
